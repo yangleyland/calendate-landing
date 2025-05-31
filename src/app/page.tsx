@@ -196,6 +196,52 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Third Page - Tell Us About Yourself */}
+      <div className="flex py-24">
+        {/* Left Side - Survey Images */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
+          <div className="relative flex items-center justify-center">
+            {/* First survey card - positioned behind and to the left */}
+            <div className="absolute -left-16 -top-8 transform">
+              <Image
+                src="/images/survey-2.png"
+                alt="App interface showing favorite time of day question"
+                width={280}
+                height={380}
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+            {/* Second survey card - positioned in front and to the right */}
+            <div className="relative z-10 transform  -translate-y-4 translate-x-24">
+              <Image
+                src="/images/survey-1.png"
+                alt="App interface showing favorite meal question"
+                width={300}
+                height={400}
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Content */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl">
+            <h2
+              className="text-5xl font-bold mb-6"
+              style={{ color: "#9A0600" }}
+            >
+              tell us about yourself
+            </h2>
+            <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              quick, casual, easy — tell us about your perfect date
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
