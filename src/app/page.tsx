@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -6,7 +8,7 @@ export default function Home() {
       {/* First Page */}
       <div className="min-h-screen flex">
         {/* Left Side - White Background */}
-        <div className="flex-1 bg-white flex flex-col">
+        <div className="flex-1 bg-white flex flex-col relative">
           {/* Navigation */}
           <nav className="flex items-center space-x-8 p-6">
             <div className="flex items-center space-x-2">
@@ -46,7 +48,7 @@ export default function Home() {
           <div className="flex-1 flex items-center justify-center px-6">
             <div className="max-w-xl">
               <h1
-                className="text-6xl font-bold mb-4"
+                className="text-5xl font-bold mb-4"
                 style={{ color: "#9A0600" }}
               >
                 calen.date <span style={{ color: "#9A0600" }}>💌</span>
@@ -72,29 +74,32 @@ export default function Home() {
                   <span>→</span>
                 </button>
               </div>
-
-              {/* What is this section */}
-              <div className="mt-16">
-                <div className="flex items-center space-x-2">
-                  <span className="font-medium" style={{ color: "#9A0600" }}>
-                    what is this?
-                  </span>
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="#9A0600"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-              </div>
             </div>
+          </div>
+
+          {/* What is this section - Bottom Left Corner */}
+          <div className="absolute bottom-6 left-6">
+            <button
+              onClick={() => {
+                document.getElementById("how-it-works")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              <span
+                className="font-medium text-2xl"
+                style={{ color: "#9A0600" }}
+              >
+                what is this?
+              </span>
+              <Image
+                src="/images/arrow-1.svg"
+                alt="Arrow pointing right"
+                width={50}
+                height={50}
+              />
+            </button>
           </div>
         </div>
 
@@ -112,7 +117,7 @@ export default function Home() {
       </div>
 
       {/* Second Page - How It Works */}
-      <div className="h-screen flex">
+      <div id="how-it-works" className="h-screen flex relative">
         {/* Left Side - Landing 2 Image - Half Screen */}
         <div className="w-1/2">
           <Image
@@ -127,7 +132,7 @@ export default function Home() {
 
         {/* Right Side - Two Stacked Boxes */}
         <div className="w-1/2 flex flex-col">
-          {/* Top Box - Quarter Screen Height */}
+          {/* Top Box - Half Screen Height */}
           <div className="h-1/2 bg-white flex items-center justify-center px-12">
             <div className="max-w-xl text-center">
               {/* No swiping, no doxxing */}
@@ -159,7 +164,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Box - Quarter Screen Height */}
+          {/* Bottom Box - Half Screen Height */}
           <div
             className="h-1/2 flex items-center justify-center px-12"
             style={{ backgroundColor: "#9A0600" }}
@@ -168,34 +173,27 @@ export default function Home() {
               <h4 className="text-3xl font-bold text-white mb-4">
                 one match, one date
               </h4>
-              <p className="text-xl text-white mb-6">
+              <p className="text-xl text-white">
                 each match is an actual date on your calendar
               </p>
-
-              {/* How does it work */}
-              <div className="flex items-center justify-center space-x-2">
-                <span className="text-lg font-medium text-white">
-                  how does it work?
-                </span>
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="white"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 15l6-6m0 0l-6-6m6 6H9a6 6 0 000 12v0"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
+        </div>
 
-          {/* Remaining Space - Fill */}
-          <div className="flex-1 bg-white"></div>
+        {/* How does it work - Bottom Right Corner */}
+        <div className="absolute bottom-6 right-6">
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/images/arrow-2.svg"
+              alt="Arrow pointing"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
+            <span className="text-2xl font-medium text-white">
+              how does it work?
+            </span>
+          </div>
         </div>
       </div>
     </>
