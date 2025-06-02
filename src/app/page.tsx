@@ -198,7 +198,7 @@ export default function Home() {
       </div>
 
       {/* Third Page - Tell Us About Yourself */}
-      <div className="flex py-24">
+      <div className="flex">
         {/* Left Side - Survey Images */}
         <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
           <div className="relative flex items-center justify-center">
@@ -238,6 +238,72 @@ export default function Home() {
             </h2>
             <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
               quick, casual, easy — tell us about your perfect date
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Fourth Page - Review Availability */}
+      <div className="flex">
+        {/* Left Side - Content */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl">
+            <h2
+              className="text-5xl font-bold mb-6"
+              style={{ color: "#9A0600" }}
+            >
+              tell us when you&apos;re free
+            </h2>
+            <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              because finding time is easier than making time
+            </p>
+          </div>
+        </div>
+        {/* Right Side - Survey Images */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
+          <div className="relative flex items-center justify-center">
+            <div className="relative z-10">
+              <Image
+                src="/images/review-availability.png"
+                alt="App interface showing availability"
+                width={300}
+                height={400}
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Fifth Page - Tell Us About Yourself */}
+      <div className="flex">
+        {/* Left Side - Survey Images */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
+          <div className="relative flex items-center justify-center">
+            {/* First survey card - positioned behind and to the left */}
+            <Image
+              src="/images/reveal-collection.png"
+              alt="App interface showing algorithm"
+              width={280}
+              height={380}
+              className="object-contain drop-shadow-2xl"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Right Side - Content */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl">
+            <h2
+              className="text-5xl font-bold mb-6"
+              style={{ color: "#9A0600" }}
+            >
+              see the actual algorithm
+            </h2>
+            <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              no AI, no &quot;vibes&quot; - read about why they&apos;re the
+              right person for you
             </p>
           </div>
         </div>
