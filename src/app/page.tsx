@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,6 +95,7 @@ export default function Home() {
               </p>
 
               <button
+                onClick={() => router.push("/join-waitlist")}
                 className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-90 transition-opacity border-4 flex items-center justify-between"
                 style={{
                   backgroundColor: "white",
@@ -211,7 +214,14 @@ export default function Home() {
 
         {/* How does it work - Bottom Right Corner */}
         <div className="absolute bottom-6 right-6">
-          <div className="flex items-center space-x-2">
+          <button
+            onClick={() =>
+              document
+                .getElementById("tell-us")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <Image
               src="/images/arrow-2.svg"
               alt="Arrow pointing"
@@ -222,12 +232,12 @@ export default function Home() {
             <span className="text-2xl font-medium text-white">
               how does it work?
             </span>
-          </div>
+          </button>
         </div>
       </div>
 
       {/* Third Page - Tell Us About Yourself */}
-      <div className="flex">
+      <div id="tell-us" className="flex">
         {/* Left Side - Survey Images */}
         <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
           <div className="relative flex items-center justify-center">
@@ -375,7 +385,8 @@ export default function Home() {
           </p>
         </div>
         <button
-          className="w-3/4 mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
+          onClick={() => router.push("/join-waitlist")}
+          className="w-full mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
           style={{ backgroundColor: "#9A0600" }}
         >
           Sign up for a blind date
