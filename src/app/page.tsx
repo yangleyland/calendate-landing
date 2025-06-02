@@ -1,48 +1,80 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center space-x-8 p-6 transition-all duration-300 ${
+          scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        }`}
+      >
+        <div className="flex items-center space-x-2">
+          <span className="text-2xl">💌</span>
+        </div>
+        <button
+          onClick={() =>
+            document
+              .getElementById("home")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="font-medium hover:opacity-80 transition-opacity"
+          style={{ color: "#9A0600" }}
+        >
+          date ❤
+        </button>
+        <button
+          onClick={() =>
+            document
+              .getElementById("how-it-works")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="font-medium hover:opacity-80 transition-opacity"
+          style={{ color: "#9A0600" }}
+        >
+          how it works
+        </button>
+        <button
+          onClick={() =>
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="font-medium hover:opacity-80 transition-opacity"
+          style={{ color: "#9A0600" }}
+        >
+          about
+        </button>
+        <button
+          onClick={() =>
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="font-medium hover:opacity-80 transition-opacity"
+          style={{ color: "#9A0600" }}
+        >
+          contact
+        </button>
+      </nav>
       {/* First Page */}
-      <div className="min-h-screen flex">
+      <div id="home" className="min-h-screen flex">
         {/* Left Side - White Background */}
         <div className="flex-1 bg-white flex flex-col relative">
           {/* Navigation */}
-          <nav className="flex items-center space-x-8 p-6">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl">💌</span>
-            </div>
-            <a
-              href="#"
-              className="font-medium hover:opacity-80 transition-opacity"
-              style={{ color: "#9A0600" }}
-            >
-              date ❤
-            </a>
-            <a
-              href="#"
-              className="font-medium hover:opacity-80 transition-opacity"
-              style={{ color: "#9A0600" }}
-            >
-              how it works
-            </a>
-            <a
-              href="#"
-              className="font-medium hover:opacity-80 transition-opacity"
-              style={{ color: "#9A0600" }}
-            >
-              about
-            </a>
-            <a
-              href="#"
-              className="font-medium hover:opacity-80 transition-opacity"
-              style={{ color: "#9A0600" }}
-            >
-              contact
-            </a>
-          </nav>
 
           {/* Main Content */}
           <div className="flex-1 flex items-center justify-center px-6">
@@ -60,20 +92,17 @@ export default function Home() {
                 the dating app that plans your next date
               </p>
 
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="sign up for a blind date"
-                  className="bg-white px-6 py-4 pr-16 rounded-2xl text-lg font-medium border-4 w-full focus:outline-none focus:ring-2 focus:ring-opacity-50"
-                  style={{ borderColor: "#9A0600", color: "#9A0600" }}
-                />
-                <button
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 rounded-md text-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center"
-                  style={{ color: "#9A0600" }}
-                >
-                  <span>→</span>
-                </button>
-              </div>
+              <button
+                className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-90 transition-opacity border-4 flex items-center justify-between"
+                style={{
+                  backgroundColor: "white",
+                  color: "#9A0600",
+                  borderColor: "#9A0600",
+                }}
+              >
+                <span>Join the waitlist now</span>
+                <span>→</span>
+              </button>
             </div>
           </div>
 
@@ -203,27 +232,14 @@ export default function Home() {
         <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
           <div className="relative flex items-center justify-center">
             {/* First survey card - positioned behind and to the left */}
-            <div className="absolute -left-16 -top-8 transform">
-              <Image
-                src="/images/survey-2.png"
-                alt="App interface showing favorite time of day question"
-                width={280}
-                height={380}
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
-            {/* Second survey card - positioned in front and to the right */}
-            <div className="relative z-10 transform  -translate-y-4 translate-x-24">
-              <Image
-                src="/images/survey-1.png"
-                alt="App interface showing favorite meal question"
-                width={300}
-                height={400}
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
+            <Image
+              src="/images/survey.png"
+              alt="App interface showing favorite time of day question"
+              width={671}
+              height={572}
+              className="object-contain drop-shadow-2xl"
+              priority
+            />
           </div>
         </div>
 
@@ -284,8 +300,8 @@ export default function Home() {
             <Image
               src="/images/reveal-collection.png"
               alt="App interface showing algorithm"
-              width={280}
-              height={380}
+              width={745}
+              height={500}
               className="object-contain drop-shadow-2xl"
               priority
             />
@@ -305,6 +321,149 @@ export default function Home() {
               no AI, no &quot;vibes&quot; - read about why they&apos;re the
               right person for you
             </p>
+          </div>
+        </div>
+      </div>
+      {/* Sixth Page - Match */}
+      <div className="flex">
+        {/* Left Side - Content */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl">
+            <h2
+              className="text-5xl font-bold mb-6"
+              style={{ color: "#9A0600" }}
+            >
+              Right person, right time
+            </h2>
+            <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              receive your date & match, curated just for you every week
+            </p>
+          </div>
+        </div>
+        {/* Right Side - Survey Images */}
+        <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
+          <div className="relative flex items-center justify-center">
+            <div className="relative z-10">
+              <Image
+                src="/images/match.png"
+                alt="App interface showing availability"
+                width={703}
+                height={597}
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Seventh Page - Calendar Invite */}
+      <div className="flex w-1/2 mx-auto flex-col items-center justify-center py-12">
+        <Image
+          src="/images/calendar-appointment.png"
+          alt="Calendar invite"
+          width={703}
+          height={597}
+          className=""
+          priority
+        />
+        <div className="flex flex-col items-center justify-center">
+          <p className="text-4xl font-bold" style={{ color: "#9A0600" }}>
+            Accept your calendar invite, date
+          </p>
+          <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+            Dating should be as easy as accepting an invite
+          </p>
+        </div>
+        <button
+          className="w-3/4 mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
+          style={{ backgroundColor: "#9A0600" }}
+        >
+          Sign up for a blind date
+        </button>
+      </div>
+      <div
+        id="about"
+        className="flex bg-[#9A0600] flex-col items-center justify-jtart px-12 py-16"
+      >
+        <h2 className="text-5xl font-bold text-white mb-12 text-center">
+          About us
+        </h2>
+        <div className="flex justify-center">
+          <Image
+            src="/images/about-us.png"
+            alt="About us"
+            width={1200}
+            height={800}
+            className="w-[90vw] h-auto object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
+      </div>
+      <div id="contact" className="flex">
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl flex flex-col items-start justify-center">
+            <h1
+              className="text-5xl font-bold mb-4"
+              style={{ color: "#9A0600" }}
+            >
+              calen.date <span style={{ color: "#9A0600" }}>💌</span>
+            </h1>
+            <p
+              className="text-3xl font-bold leading-none tracking-tighter"
+              style={{
+                color: "#9A0600",
+                letterSpacing: "-2%",
+              }}
+            >
+              Find your right person, right time
+            </p>
+            <button
+              className="w-full mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "#9A0600" }}
+            >
+              Sign up for a blind date
+            </button>
+          </div>
+        </div>
+        <div className="w-1/2 bg-white flex items-center justify-center px-12">
+          <div className="max-w-xl w-full py-12">
+            <form className="gap-2 flex flex-col items-start justify-center">
+              {/* Name and Email row */}
+              <h2 className="text-3xl font-bold " style={{ color: "#9A0600" }}>
+                Contact us
+              </h2>
+              <div className="flex space-x-4">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="flex-1 px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-[#9A0600]"
+                  style={{ borderColor: "#9A0600" }}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="flex-1 px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-[#9A0600]"
+                  style={{ borderColor: "#9A0600" }}
+                />
+              </div>
+
+              {/* Message textarea */}
+              <textarea
+                placeholder="Message"
+                rows={4}
+                className="w-full px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 resize-none focus:outline-none focus:border-[#9A0600]"
+                style={{ borderColor: "#9A0600" }}
+              />
+
+              {/* Submit button */}
+              <button
+                type="submit"
+                className="px-8 py-3 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: "#801F20" }}
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
