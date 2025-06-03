@@ -82,7 +82,8 @@ export default function Home() {
         style={{ backgroundColor: "#801F20" }}
       >
         <span className="text-xl font-bold text-white">calen.date</span>
-        <div
+        <button
+          onClick={() => router.push("/join-waitlist")}
           style={{
             background: "rgba(255, 255, 255, 0.41)",
           }}
@@ -101,7 +102,7 @@ export default function Home() {
               fill="white"
             />
           </svg>
-        </div>
+        </button>
       </nav>
 
       {/* DESKTOP VERSION - Hidden on mobile */}
@@ -507,13 +508,13 @@ export default function Home() {
                 />
 
                 {/* Submit button */}
-                <button
-                  type="submit"
-                  className="px-8 py-3 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity"
+                <a
+                  href="mailto:date.calendate@gmail.com"
+                  className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
                   style={{ backgroundColor: "#801F20" }}
                 >
-                  Submit
-                </button>
+                  Contact us
+                </a>
               </form>
             </div>
           </div>
@@ -795,13 +796,13 @@ export default function Home() {
             </p>
           </div>
 
-          <button
-            // onClick={}
-            className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity"
+          <a
+            href="mailto:date.calendate@gmail.com"
+            className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
             style={{ backgroundColor: "#801F20" }}
           >
             Contact us
-          </button>
+          </a>
         </div>
       </div>
       {/* END MOBILE VERSION */}
