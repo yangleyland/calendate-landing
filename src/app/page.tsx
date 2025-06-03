@@ -255,7 +255,7 @@ export default function Home() {
                 className="w-10 h-10"
               />
               <span className="text-2xl font-medium text-white">
-                how does it work?
+                How does it work?
               </span>
             </button>
           </div>
@@ -579,7 +579,7 @@ export default function Home() {
             {/* Bottom Section */}
           </div>
           <div
-            className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center"
+            className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center relative"
             style={{ backgroundColor: "#801F20" }}
           >
             <h4 className="text-2xl font-bold text-white mb-4">
@@ -595,18 +595,18 @@ export default function Home() {
                   .getElementById("tell-us-mobile")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="flex items-center justify-center space-x-2 mx-auto hover:opacity-80 transition-opacity"
+              className="absolute bottom-0 right-4 flex items-center justify-center space-x-2 mx-auto hover:opacity-80 transition-opacity"
             >
-              <span className="text-lg font-medium text-white">
-                how does it work?
-              </span>
               <Image
                 src="/images/arrow-2.svg"
                 alt="Arrow pointing"
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="w-10 h-10"
               />
+              <span className="text-md font-[700] text-white relative bottom-2">
+                How does it work?
+              </span>
             </button>
           </div>
         </div>
