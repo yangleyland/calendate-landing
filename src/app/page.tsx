@@ -130,7 +130,7 @@ export default function Home() {
 
                 <button
                   onClick={() => router.push("/join-waitlist")}
-                  className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-90 transition-opacity border-4 flex items-center justify-between"
+                  className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-95 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-sm transition-all duration-200 border-4 flex items-center justify-between"
                   style={{
                     backgroundColor: "white",
                     color: "#9A0600",
