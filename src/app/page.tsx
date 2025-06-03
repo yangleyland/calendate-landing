@@ -113,7 +113,7 @@ export default function Home() {
                   className="text-2xl mb-8 font-medium"
                   style={{ color: "#9A0600" }}
                 >
-                  the dating app that plans your next date
+                  The dating app that plans your next date
                 </p>
 
                 <button
@@ -285,10 +285,10 @@ export default function Home() {
                 className="text-5xl font-bold mb-6"
                 style={{ color: "#9A0600" }}
               >
-                tell us about yourself
+                Tell us about yourself
               </h2>
               <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
-                quick, casual, easy — tell us about your perfect date
+                Quick, casual, easy — tell us about your perfect date
               </p>
             </div>
           </div>
@@ -303,10 +303,10 @@ export default function Home() {
                 className="text-5xl font-bold mb-6"
                 style={{ color: "#9A0600" }}
               >
-                tell us when you&apos;re free
+                Tell us when you&apos;re free
               </h2>
               <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
-                because finding time is easier than making time
+                Because finding time is easier than making time
               </p>
             </div>
           </div>
@@ -350,10 +350,10 @@ export default function Home() {
                 className="text-5xl font-bold mb-6"
                 style={{ color: "#9A0600" }}
               >
-                see the actual algorithm
+                See the actual algorithm
               </h2>
               <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
-                no AI, no &quot;vibes&quot; - read about why they&apos;re the
+                No AI, no &quot;vibes&quot; - read about why they&apos;re the
                 right person for you
               </p>
             </div>
@@ -371,7 +371,7 @@ export default function Home() {
                 Right person, right time
               </h2>
               <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
-                receive your date & match, curated just for you every week
+                Receive your date & match, curated just for you every week
               </p>
             </div>
           </div>
@@ -530,13 +530,13 @@ export default function Home() {
               <h1 className="text-4xl font-bold mb-4 text-white">
                 calen.date <span style={{ color: "#9A0600" }}>💌</span>
               </h1>
-              <p className="text-lg mb-8 font-medium text-white">
-                the dating app that plans your next date
+              <p className="text-md mb-8 font-[600] text-white">
+                The dating app that plans your next date
               </p>
 
               <button
                 onClick={() => router.push("/join-waitlist")}
-                className="w-2/3 px-6 py-3 text-lg font-medium hover:opacity-90 transition-opacity border flex items-center justify-between text-white"
+                className="w-2/3 px-6 py-3 text-sm font-[700] hover:opacity-90 transition-opacity border flex items-center justify-between text-white"
                 style={{
                   borderRadius: "100px",
                   border: "1px solid rgba(255, 255, 255, 0.12)",
@@ -558,19 +558,28 @@ export default function Home() {
             {/* Top Section */}
             <div className="text-left mb-8">
               <h2
-                className="text-xl font-medium mb-4"
+                className="text-xl font-[600] mb-4"
                 style={{ color: "#9A0600" }}
               >
                 No swiping, no doxxing
               </h2>
               <div>
-                <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
+                <h3
+                  className="text-2xl font-[700]"
+                  style={{ color: "#9A0600" }}
+                >
                   Tell us about yourself,
                 </h3>
-                <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
+                <h3
+                  className="text-2xl font-[700]"
+                  style={{ color: "#9A0600" }}
+                >
                   3 quick questions, & accept
                 </h3>
-                <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
+                <h3
+                  className="text-2xl font-[700]"
+                  style={{ color: "#9A0600" }}
+                >
                   your calendar invite
                 </h3>
               </div>
@@ -582,10 +591,10 @@ export default function Home() {
             className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center relative"
             style={{ backgroundColor: "#801F20" }}
           >
-            <h4 className="text-2xl font-bold text-white mb-4">
+            <h4 className="text-2xl font-[700] text-white mb-4">
               One match, one date
             </h4>
-            <p className="text-lg text-white mb-4">
+            <p className="text-lg font-[600] text-white mb-4">
               Each match is an actual date on your calendar
             </p>
 
@@ -614,17 +623,11 @@ export default function Home() {
         {/* Third Page - Tell Us About Yourself */}
         <div id="tell-us-mobile" className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: "#9A0600" }}
-            >
-              tell us about yourself
+            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+              Tell us about yourself
             </h2>
-            <p
-              className="text-lg font-medium mb-6"
-              style={{ color: "#9A0600" }}
-            >
-              quick, casual, easy — tell us about your perfect date
+            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+              Quick, casual, easy — tell us about your perfect date
             </p>
           </div>
           <div className="px-6 pb-8">
@@ -642,17 +645,11 @@ export default function Home() {
         {/* Fourth Page - Review Availability */}
         <div className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: "#9A0600" }}
-            >
-              tell us when you&apos;re free
+            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+              Tell us when you&apos;re free
             </h2>
-            <p
-              className="text-lg font-medium mb-6"
-              style={{ color: "#9A0600" }}
-            >
-              because finding time is easier than making time
+            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+              Because finding time is easier than making time
             </p>
           </div>
           <div className="px-6 pb-8 flex justify-center">
@@ -670,14 +667,11 @@ export default function Home() {
         {/* Fifth Page - Algorithm */}
         <div className="bg-white">
           <div className="px-6 pb-8 text-center">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: "#9A0600" }}
-            >
-              see the actual algorithm
+            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+              See the actual algorithm
             </h2>
-            <p className="text-lg font-medium" style={{ color: "#9A0600" }}>
-              no AI, no &quot;vibes&quot; - read about why they&apos;re the
+            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+              No AI, no &quot;vibes&quot; - read about why they&apos;re the
               right person for you
             </p>
           </div>
@@ -696,17 +690,11 @@ export default function Home() {
         {/* Sixth Page - Match */}
         <div className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: "#9A0600" }}
-            >
+            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
               Right person, right time
             </h2>
-            <p
-              className="text-lg font-medium mb-6"
-              style={{ color: "#9A0600" }}
-            >
-              receive your date & match, curated just for you every week
+            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+              Receive your date & match, curated just for you every week
             </p>
           </div>
           <div className="px-6 pb-8">
@@ -747,7 +735,7 @@ export default function Home() {
           </div>
           <button
             onClick={() => router.push("/join-waitlist")}
-            className="w-[200px] px-8 py-4 rounded-full text-xl font-bold text-white hover:opacity-90 transition-opacity"
+            className="w-[200px] px-8 py-4 rounded-full text-xl font-[600] text-white hover:opacity-90 transition-opacity"
             style={{ backgroundColor: "#801F20" }}
           >
             Sign up
@@ -756,7 +744,7 @@ export default function Home() {
 
         {/* Mobile About */}
         <div className="bg-[#9A0600] px-6 py-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">About us</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">about us</h2>
           <Image
             src="/images/about-us.png"
             alt="About us"
