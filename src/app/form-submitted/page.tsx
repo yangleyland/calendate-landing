@@ -18,7 +18,10 @@ export default function FormSubmitted() {
       {/* Right Side - Content */}
       <div className="w-1/2 bg-white flex items-center justify-center px-12">
         <div className="max-w-xl w-full">
-          <h1 className="text-5xl font-bold mb-8" style={{ color: "#000" }}>
+          <h1
+            className="text-5xl font-bold mb-8"
+            style={{ color: "#000", fontFamily: "var(--font-fira-sans)" }}
+          >
             You&apos;re done! Sit tight & we&apos;ll let you know when
             we&apos;re ready.
           </h1>

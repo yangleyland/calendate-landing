@@ -11,6 +11,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-figtree: var(--font-figtree);
+  --font-fira-sans: var(--font-fira-sans);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
