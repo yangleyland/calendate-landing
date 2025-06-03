@@ -88,7 +88,7 @@ export default function Home() {
           }}
           className="px-3 py-1  rounded-2xl inline-flex justify-start items-center gap-1.5"
         >
-          <div className="font-bold">Date</div>
+          <div className="font-bold text-white">Date</div>
         </div>
       </nav>
 
@@ -194,7 +194,7 @@ export default function Home() {
                   className="text-2xl font-medium mb-6"
                   style={{ color: "#9A0600" }}
                 >
-                  no swiping, no doxxing
+                  No swiping, no doxxing
                 </h2>
 
                 {/* Tell us about yourself */}
@@ -203,19 +203,19 @@ export default function Home() {
                     className="text-3xl font-bold mb-2"
                     style={{ color: "#9A0600" }}
                   >
-                    tell us about yourself,
+                    Tell us about yourself,
                   </h3>
                   <h3
                     className="text-3xl font-bold mb-2"
                     style={{ color: "#9A0600" }}
                   >
-                    3 quick questions
+                    3 quick questions, & accept
                   </h3>
                   <h3
                     className="text-3xl font-bold"
                     style={{ color: "#9A0600" }}
                   >
-                    & accept your calendar invite
+                    your calendar invite
                   </h3>
                 </div>
               </div>
@@ -228,10 +228,10 @@ export default function Home() {
             >
               <div className="max-w-xl text-center">
                 <h4 className="text-3xl font-bold text-white mb-4">
-                  one match, one date
+                  One match, one date
                 </h4>
                 <p className="text-xl text-white">
-                  each match is an actual date on your calendar
+                  Each match is an actual date on your calendar
                 </p>
               </div>
             </div>
@@ -403,7 +403,7 @@ export default function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <p className="text-4xl font-bold" style={{ color: "#9A0600" }}>
-              Accept your calendar invite, date
+              Accept your calendar invite, & date!
             </p>
             <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
               Dating should be as easy as accepting an invite
@@ -554,66 +554,60 @@ export default function Home() {
         {/* Second Page - How It Works */}
         <div className="bg-white">
           {/* Content Sections */}
-          <div className="px-6 py-8">
+          <div className="px-6 py-8 h-[353px] flex flex-col justify-center">
             {/* Top Section */}
-            <div className="text-center mb-8">
+            <div className="text-left mb-8">
               <h2
                 className="text-xl font-medium mb-4"
                 style={{ color: "#9A0600" }}
               >
-                no swiping, no doxxing
+                No swiping, no doxxing
               </h2>
               <div>
-                <h3
-                  className="text-2xl font-bold mb-2"
-                  style={{ color: "#9A0600" }}
-                >
-                  tell us about yourself,
-                </h3>
-                <h3
-                  className="text-2xl font-bold mb-2"
-                  style={{ color: "#9A0600" }}
-                >
-                  3 quick questions
+                <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
+                  Tell us about yourself,
                 </h3>
                 <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
-                  & accept your calendar invite
+                  3 quick questions, & accept
+                </h3>
+                <h3 className="text-2xl font-bold" style={{ color: "#9A0600" }}>
+                  your calendar invite
                 </h3>
               </div>
             </div>
 
             {/* Bottom Section */}
-            <div
-              className="p-6 rounded-lg text-center"
-              style={{ backgroundColor: "#9A0600" }}
-            >
-              <h4 className="text-2xl font-bold text-white mb-4">
-                one match, one date
-              </h4>
-              <p className="text-lg text-white mb-4">
-                each match is an actual date on your calendar
-              </p>
+          </div>
+          <div
+            className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center"
+            style={{ backgroundColor: "#801F20" }}
+          >
+            <h4 className="text-2xl font-bold text-white mb-4">
+              One match, one date
+            </h4>
+            <p className="text-lg text-white mb-4">
+              Each match is an actual date on your calendar
+            </p>
 
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("tell-us-mobile")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="flex items-center justify-center space-x-2 mx-auto hover:opacity-80 transition-opacity"
-              >
-                <span className="text-lg font-medium text-white">
-                  how does it work?
-                </span>
-                <Image
-                  src="/images/arrow-2.svg"
-                  alt="Arrow pointing"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
-                />
-              </button>
-            </div>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("tell-us-mobile")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="flex items-center justify-center space-x-2 mx-auto hover:opacity-80 transition-opacity"
+            >
+              <span className="text-lg font-medium text-white">
+                how does it work?
+              </span>
+              <Image
+                src="/images/arrow-2.svg"
+                alt="Arrow pointing"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            </button>
           </div>
         </div>
 
@@ -738,19 +732,25 @@ export default function Home() {
             priority
           />
           <div className="mb-6">
-            <p className="text-2xl font-bold mb-2" style={{ color: "#9A0600" }}>
-              Accept your calendar invite, date
+            <p
+              className="text-2xl font-bold mb-2 w-[250px] mx-auto"
+              style={{ color: "#9A0600" }}
+            >
+              Accept your calendar invite, & date!
             </p>
-            <p className="text-lg font-medium" style={{ color: "#9A0600" }}>
+            <p
+              className="text-lg font-[600] w-[250px] mx-auto"
+              style={{ color: "#9A0600" }}
+            >
               Dating should be as easy as accepting an invite
             </p>
           </div>
           <button
             onClick={() => router.push("/join-waitlist")}
-            className="w-full px-8 py-4 rounded-full text-xl font-bold text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#9A0600" }}
+            className="w-[200px] px-8 py-4 rounded-full text-xl font-bold text-white hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "#801F20" }}
           >
-            Sign up for a blind date
+            Sign up
           </button>
         </div>
 
@@ -770,16 +770,13 @@ export default function Home() {
         {/* Mobile Contact */}
         <div className="bg-white px-6 py-12">
           <div className="text-center mb-8">
-            <h1
-              className="text-3xl font-bold mb-4"
-              style={{ color: "#9A0600" }}
-            >
-              calen.date <span style={{ color: "#9A0600" }}>💌</span>
+            <h1 className="text-4xl font-bold" style={{ color: "#801F20" }}>
+              calen.date
             </h1>
             <p
-              className="text-xl font-bold leading-tight"
+              className="text-lg font-bold leading-tight"
               style={{
-                color: "#9A0600",
+                color: "#801F20",
                 letterSpacing: "-1%",
               }}
             >
@@ -787,49 +784,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mb-8">
-            <h2
-              className="text-2xl font-bold mb-6"
-              style={{ color: "#9A0600" }}
-            >
-              Contact us
-            </h2>
-            <form className="space-y-4">
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-3 rounded-xl text-gray-700 placeholder-gray-500 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 rounded-xl text-gray-700 placeholder-gray-500 focus:outline-none"
-                />
-              </div>
-
-              <textarea
-                placeholder="Message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-xl text-gray-700 placeholder-gray-500 resize-none focus:outline-none"
-              />
-
-              <button
-                type="submit"
-                className="w-full py-3 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#9A0600" }}
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-
           <button
-            onClick={() => router.push("/join-waitlist")}
-            className="w-full px-8 py-4 rounded-full text-xl font-bold text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#9A0600" }}
+            // onClick={}
+            className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "#801F20" }}
           >
-            Sign up for a blind date
+            Contact us
           </button>
         </div>
       </div>
