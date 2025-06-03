@@ -12,6 +12,7 @@ export default function JoinWaitlist() {
     location: "",
     phone: "",
   });
+  //states
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
