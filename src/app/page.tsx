@@ -28,11 +28,20 @@ export default function Home() {
         }`}
       >
         <div className="flex items-center space-x-2">
-          <span className="text-2xl">💌</span>
+          <button
+            onClick={() =>
+              document.getElementById("home")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
+            className="text-2xl"
+          >
+            💌
+          </button>
         </div>
         <button
           onClick={() => router.push("/join-waitlist")}
-          className="font-medium hover:opacity-80 transition-opacity"
+          className="font-medium hover:opacity-80 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#A30003] after:transition-all after:duration-300 hover:after:w-full"
           style={{ color: "#A30003" }}
         >
           date ❤
@@ -43,7 +52,7 @@ export default function Home() {
               .getElementById("how-it-works")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="font-medium hover:opacity-80 transition-opacity"
+          className="font-medium hover:opacity-80 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#A30003] after:transition-all after:duration-300 hover:after:w-full"
           style={{ color: "#A30003" }}
         >
           how it works
@@ -54,7 +63,7 @@ export default function Home() {
               .getElementById("about")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="font-medium hover:opacity-80 transition-opacity"
+          className="font-medium hover:opacity-80 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#A30003] after:transition-all after:duration-300 hover:after:w-full"
           style={{ color: "#A30003" }}
         >
           about
@@ -65,7 +74,7 @@ export default function Home() {
               .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="font-medium hover:opacity-80 transition-opacity"
+          className="font-medium hover:opacity-80 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#A30003] after:transition-all after:duration-300 hover:after:w-full"
           style={{ color: "#A30003" }}
         >
           contact
@@ -129,15 +138,21 @@ export default function Home() {
 
                 <button
                   onClick={() => router.push("/join-waitlist")}
-                  className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-95 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-sm transition-all duration-200 border-4 flex items-center justify-between"
-                  style={{
-                    backgroundColor: "white",
-                    color: "#A30003",
-                    borderColor: "#A30003",
-                  }}
+                  className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium bg-white text-[#A30003] border-4 border-[#A30003] hover:bg-[#A30003] hover:text-white hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-sm transition-all duration-200 flex items-center justify-between"
                 >
                   <span>Join the waitlist now</span>
-                  <span>→</span>
+                  <svg
+                    width="21"
+                    height="17"
+                    viewBox="0 0 21 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.6895 0.698579C11.9708 0.417372 12.3523 0.259399 12.75 0.259399C13.1477 0.259399 13.5292 0.417372 13.8105 0.698579L20.5605 7.44858C20.8417 7.72987 20.9997 8.11133 20.9997 8.50908C20.9997 8.90683 20.8417 9.28829 20.5605 9.56958L13.8105 16.3196C13.5276 16.5928 13.1487 16.744 12.7554 16.7406C12.3621 16.7372 11.1859 16.5794 11.7078 16.3013C11.4297 16.0232 11.2719 15.647 11.2685 15.2537C11.2651 14.8604 11.4163 14.4815 11.6895 14.1986L15.75 10.0091H1.5C1.10218 10.0091 0.720644 9.85104 0.43934 9.56974C0.158035 9.28843 0 8.9069 0 8.50908C0 8.11125 0.158035 7.72972 0.43934 7.44842C0.720644 7.16711 1.10218 7.00908 1.5 7.00908H15.75L11.6895 2.81958C11.4083 2.53829 11.2503 2.15683 11.2503 1.75908C11.2503 1.36133 11.4083 0.97987 11.6895 0.698579Z"
+                      className="fill-current"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -150,10 +165,10 @@ export default function Home() {
                     behavior: "smooth",
                   });
                 }}
-                className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+                className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300 cursor-pointer group"
               >
                 <span
-                  className="font-medium text-2xl"
+                  className="font-medium text-2xl relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#A30003] after:transition-all after:duration-300 group-hover:after:w-full"
                   style={{ color: "#A30003" }}
                 >
                   what is this?
@@ -256,7 +271,7 @@ export default function Home() {
                   .getElementById("tell-us")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+              className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300 cursor-pointer group"
             >
               <Image
                 src="/images/arrow-2.svg"
@@ -265,7 +280,7 @@ export default function Home() {
                 height={40}
                 className="w-10 h-10"
               />
-              <span className="text-2xl font-medium text-white">
+              <span className="text-2xl font-medium text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
                 How does it work?
               </span>
             </button>
@@ -276,14 +291,14 @@ export default function Home() {
         <div id="tell-us" className="flex">
           {/* Left Side - Survey Images */}
           <div className="w-1/2 bg-white flex items-center justify-center px-12 py-16">
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center ">
               {/* First survey card - positioned behind and to the left */}
               <Image
                 src="/images/survey.png"
                 alt="App interface showing favorite time of day question"
                 width={671}
                 height={572}
-                className="object-contain drop-shadow-2xl"
+                className="object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110 cursor-pointer"
                 priority
               />
             </div>
@@ -330,7 +345,7 @@ export default function Home() {
                   alt="App interface showing availability"
                   width={300}
                   height={400}
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110 cursor-pointer"
                   priority
                 />
               </div>
@@ -348,7 +363,7 @@ export default function Home() {
                 alt="App interface showing algorithm"
                 width={745}
                 height={500}
-                className="object-contain drop-shadow-2xl"
+                className="object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110 cursor-pointer"
                 priority
               />
             </div>
@@ -395,7 +410,7 @@ export default function Home() {
                   alt="App interface showing availability"
                   width={703}
                   height={597}
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-110 cursor-pointer"
                   priority
                 />
               </div>
@@ -414,7 +429,7 @@ export default function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <p className="text-4xl font-bold" style={{ color: "#A30003" }}>
-              Accept your calendar invite, & date!
+              Accept your calendar invite, date
             </p>
             <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
               Dating should be as easy as accepting an invite
@@ -471,6 +486,44 @@ export default function Home() {
               >
                 Sign up for a blind date
               </button>
+              <div className="flex items-center justify-center mt-4 gap-4">
+                <a
+                  href="https://instagram.com/calen.date"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110 hover:opacity-80"
+                >
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.6 4H32.4C38.8 4 44 9.2 44 15.6V32.4C44 35.4765 42.7779 38.427 40.6024 40.6024C38.427 42.7779 35.4765 44 32.4 44H15.6C9.2 44 4 38.8 4 32.4V15.6C4 12.5235 5.22214 9.57298 7.39756 7.39756C9.57298 5.22214 12.5235 4 15.6 4ZM15.2 8C13.2904 8 11.4591 8.75857 10.1088 10.1088C8.75857 11.4591 8 13.2904 8 15.2V32.8C8 36.78 11.22 40 15.2 40H32.8C34.7096 40 36.5409 39.2414 37.8912 37.8912C39.2414 36.5409 40 34.7096 40 32.8V15.2C40 11.22 36.78 8 32.8 8H15.2ZM34.5 11C35.163 11 35.7989 11.2634 36.2678 11.7322C36.7366 12.2011 37 12.837 37 13.5C37 14.163 36.7366 14.7989 36.2678 15.2678C35.7989 15.7366 35.163 16 34.5 16C33.837 16 33.2011 15.7366 32.7322 15.2678C32.2634 14.7989 32 14.163 32 13.5C32 12.837 32.2634 12.2011 32.7322 11.7322C33.2011 11.2634 33.837 11 34.5 11ZM24 14C26.6522 14 29.1957 15.0536 31.0711 16.9289C32.9464 18.8043 34 21.3478 34 24C34 26.6522 32.9464 29.1957 31.0711 31.0711C29.1957 32.9464 26.6522 34 24 34C21.3478 34 18.8043 32.9464 16.9289 31.0711C15.0536 29.1957 14 26.6522 14 24C14 21.3478 15.0536 18.8043 16.9289 16.9289C18.8043 15.0536 21.3478 14 24 14ZM24 18C22.4087 18 20.8826 18.6321 19.7574 19.7574C18.6321 20.8826 18 22.4087 18 24C18 25.5913 18.6321 27.1174 19.7574 28.2426C20.8826 29.3679 22.4087 30 24 30C25.5913 30 27.1174 29.3679 28.2426 28.2426C29.3679 27.1174 30 25.5913 30 24C30 22.4087 29.3679 20.8826 28.2426 19.7574C27.1174 18.6321 25.5913 18 24 18Z"
+                      fill="#A30003"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="mailto:date.calendate@gmail.com"
+                  className="transition-all duration-300 hover:scale-110 hover:opacity-80"
+                >
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 40C6.9 40 5.95867 39.6087 5.176 38.826C4.39333 38.0433 4.00133 37.1013 4 36V12C4 10.9 4.392 9.95867 5.176 9.176C5.96 8.39333 6.90133 8.00133 8 8H40C41.1 8 42.042 8.392 42.826 9.176C43.61 9.96 44.0013 10.9013 44 12V36C44 37.1 43.6087 38.042 42.826 38.826C42.0433 39.61 41.1013 40.0013 40 40H8ZM24 26L8 16V36H40V16L24 26ZM24 22L40 12H8L24 22ZM8 16V12V36V16Z"
+                      fill="#A30003"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
           <div className="w-1/2 bg-white flex items-center justify-center px-12">
@@ -507,13 +560,12 @@ export default function Home() {
                 />
 
                 {/* Submit button */}
-                <a
-                  href="mailto:date.calendate@gmail.com"
-                  className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
+                <button
+                  className="px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
                   style={{ backgroundColor: "#A30003" }}
                 >
-                  Contact us
-                </a>
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -747,7 +799,7 @@ export default function Home() {
               className="text-2xl font-bold mb-2 w-[250px] mx-auto"
               style={{ color: "#A30003" }}
             >
-              Accept your calendar invite, & date!
+              Accept your calendar invite, date
             </p>
             <p
               className="text-lg font-[600] w-[250px] mx-auto"
