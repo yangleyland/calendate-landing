@@ -465,6 +465,7 @@ export default function Home() {
                 Find your right person, right time
               </p>
               <button
+                onClick={() => router.push("/join-waitlist")}
                 className="w-full mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: "#A30003" }}
               >
