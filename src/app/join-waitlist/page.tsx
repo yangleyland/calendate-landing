@@ -201,7 +201,7 @@ export default function JoinWaitlist() {
                 placeholder="First, Last"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg placeholder-gray-400 focus:outline-none focus:border-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500"
                 disabled={isSubmitting}
               />
             </div>
@@ -216,7 +216,7 @@ export default function JoinWaitlist() {
                 placeholder="(555) 555-5555"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg placeholder-gray-400 focus:outline-none focus:border-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500"
                 disabled={isSubmitting}
               />
             </div>
@@ -231,7 +231,7 @@ export default function JoinWaitlist() {
                 placeholder="City, state"
                 value={formData.location}
                 onChange={(e) => handleInputChange("location", e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg placeholder-gray-400 focus:outline-none focus:border-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500"
                 disabled={isSubmitting}
               />
             </div>

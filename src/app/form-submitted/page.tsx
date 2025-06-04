@@ -80,10 +80,12 @@ export default function FormSubmitted() {
               </p>
 
               <button
-                onClick={() => router.push("/")}
+                onClick={() =>
+                  window.open("https://instagram.com/calen.date", "_blank")
+                }
                 className="bg-black text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
               >
-                Go to mainpage
+                Check out our Instagram
               </button>
             </div>
           </div>

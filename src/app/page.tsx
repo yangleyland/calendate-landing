@@ -31,13 +31,9 @@ export default function Home() {
           <span className="text-2xl">💌</span>
         </div>
         <button
-          onClick={() =>
-            document
-              .getElementById("home")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => router.push("/join-waitlist")}
           className="font-medium hover:opacity-80 transition-opacity"
-          style={{ color: "#9A0600" }}
+          style={{ color: "#A30003" }}
         >
           date ❤
         </button>
@@ -48,7 +44,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: "smooth" })
           }
           className="font-medium hover:opacity-80 transition-opacity"
-          style={{ color: "#9A0600" }}
+          style={{ color: "#A30003" }}
         >
           how it works
         </button>
@@ -59,7 +55,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: "smooth" })
           }
           className="font-medium hover:opacity-80 transition-opacity"
-          style={{ color: "#9A0600" }}
+          style={{ color: "#A30003" }}
         >
           about
         </button>
@@ -70,7 +66,7 @@ export default function Home() {
               ?.scrollIntoView({ behavior: "smooth" })
           }
           className="font-medium hover:opacity-80 transition-opacity"
-          style={{ color: "#9A0600" }}
+          style={{ color: "#A30003" }}
         >
           contact
         </button>
@@ -78,8 +74,10 @@ export default function Home() {
 
       {/* Mobile Navigation */}
       <nav
-        className="md:hidden sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-4"
-        style={{ backgroundColor: "#801F20" }}
+        className={`md:hidden sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-4 transition-all duration-300 ${
+          scrolled ? "bg-[#A30003]/60 backdrop-blur-md shadow-sm" : ""
+        }`}
+        style={scrolled ? {} : { backgroundColor: "#A30003" }}
       >
         <span className="text-xl font-bold text-white">calen.date</span>
         <button
@@ -118,13 +116,13 @@ export default function Home() {
               <div className="max-w-xl">
                 <h1
                   className="text-5xl font-bold mb-4"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
-                  calen.date <span style={{ color: "#9A0600" }}>💌</span>
+                  calen.date <span style={{ color: "#A30003" }}>💌</span>
                 </h1>
                 <p
                   className="text-2xl mb-8 font-medium"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   The dating app that plans your next date
                 </p>
@@ -134,8 +132,8 @@ export default function Home() {
                   className="w-full mt-8 px-4 py-2 rounded-2xl text-xl font-medium hover:opacity-95 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-sm transition-all duration-200 border-4 flex items-center justify-between"
                   style={{
                     backgroundColor: "white",
-                    color: "#9A0600",
-                    borderColor: "#9A0600",
+                    color: "#A30003",
+                    borderColor: "#A30003",
                   }}
                 >
                   <span>Join the waitlist now</span>
@@ -156,7 +154,7 @@ export default function Home() {
               >
                 <span
                   className="font-medium text-2xl"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   what is this?
                 </span>
@@ -205,7 +203,7 @@ export default function Home() {
                 {/* No swiping, no doxxing */}
                 <h2
                   className="text-2xl font-medium mb-6"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   No swiping, no doxxing
                 </h2>
@@ -214,19 +212,19 @@ export default function Home() {
                 <div>
                   <h3
                     className="text-3xl font-bold mb-2"
-                    style={{ color: "#9A0600" }}
+                    style={{ color: "#A30003" }}
                   >
                     Tell us about yourself,
                   </h3>
                   <h3
                     className="text-3xl font-bold mb-2"
-                    style={{ color: "#9A0600" }}
+                    style={{ color: "#A30003" }}
                   >
                     3 quick questions, & accept
                   </h3>
                   <h3
                     className="text-3xl font-bold"
-                    style={{ color: "#9A0600" }}
+                    style={{ color: "#A30003" }}
                   >
                     your calendar invite
                   </h3>
@@ -237,7 +235,7 @@ export default function Home() {
             {/* Bottom Box - Half Screen Height */}
             <div
               className="h-1/2 flex items-center justify-center px-12"
-              style={{ backgroundColor: "#9A0600" }}
+              style={{ backgroundColor: "#A30003" }}
             >
               <div className="max-w-xl text-center">
                 <h4 className="text-3xl font-bold text-white mb-4">
@@ -296,11 +294,11 @@ export default function Home() {
             <div className="max-w-xl">
               <h2
                 className="text-5xl font-bold mb-6"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
                 Tell us about yourself
               </h2>
-              <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
                 Quick, casual, easy — tell us about your perfect date
               </p>
             </div>
@@ -314,11 +312,11 @@ export default function Home() {
             <div className="max-w-xl">
               <h2
                 className="text-5xl font-bold mb-6"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
                 Tell us when you&apos;re free
               </h2>
-              <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
                 Because finding time is easier than making time
               </p>
             </div>
@@ -361,11 +359,11 @@ export default function Home() {
             <div className="max-w-xl">
               <h2
                 className="text-5xl font-bold mb-6"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
                 See the actual algorithm
               </h2>
-              <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
                 No AI, no &quot;vibes&quot; - read about why they&apos;re the
                 right person for you
               </p>
@@ -379,11 +377,11 @@ export default function Home() {
             <div className="max-w-xl">
               <h2
                 className="text-5xl font-bold mb-6"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
                 Right person, right time
               </h2>
-              <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+              <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
                 Receive your date & match, curated just for you every week
               </p>
             </div>
@@ -415,24 +413,24 @@ export default function Home() {
             priority
           />
           <div className="flex flex-col items-center justify-center">
-            <p className="text-4xl font-bold" style={{ color: "#9A0600" }}>
+            <p className="text-4xl font-bold" style={{ color: "#A30003" }}>
               Accept your calendar invite, & date!
             </p>
-            <p className="text-2xl font-medium" style={{ color: "#9A0600" }}>
+            <p className="text-2xl font-medium" style={{ color: "#A30003" }}>
               Dating should be as easy as accepting an invite
             </p>
           </div>
           <button
             onClick={() => router.push("/join-waitlist")}
             className="w-full mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#9A0600" }}
+            style={{ backgroundColor: "#A30003" }}
           >
             Sign up for a blind date
           </button>
         </div>
         <div
           id="about"
-          className="flex bg-[#9A0600] flex-col items-center justify-jtart px-12 py-16"
+          className="flex bg-[#A30003] flex-col items-center justify-jtart px-12 py-16"
         >
           <h2 className="text-5xl font-bold text-white mb-12 text-center">
             About us
@@ -453,14 +451,14 @@ export default function Home() {
             <div className="max-w-xl flex flex-col items-start justify-center">
               <h1
                 className="text-5xl font-bold mb-4"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
-                calen.date <span style={{ color: "#9A0600" }}>💌</span>
+                calen.date <span style={{ color: "#A30003" }}>💌</span>
               </h1>
               <p
                 className="text-3xl font-bold leading-none tracking-tighter"
                 style={{
-                  color: "#9A0600",
+                  color: "#A30003",
                   letterSpacing: "-2%",
                 }}
               >
@@ -468,7 +466,7 @@ export default function Home() {
               </p>
               <button
                 className="w-full mt-8 px-12 py-4 rounded-full text-2xl font-bold text-white hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#9A0600" }}
+                style={{ backgroundColor: "#A30003" }}
               >
                 Sign up for a blind date
               </button>
@@ -480,7 +478,7 @@ export default function Home() {
                 {/* Name and Email row */}
                 <h2
                   className="text-3xl font-bold "
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   Contact us
                 </h2>
@@ -489,13 +487,13 @@ export default function Home() {
                     type="text"
                     placeholder="Name"
                     className="flex-1 px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-[#9A0600]"
-                    style={{ borderColor: "#9A0600" }}
+                    style={{ borderColor: "#A30003" }}
                   />
                   <input
                     type="email"
                     placeholder="Email"
                     className="flex-1 px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 focus:outline-none focus:border-[#9A0600]"
-                    style={{ borderColor: "#9A0600" }}
+                    style={{ borderColor: "#A30003" }}
                   />
                 </div>
 
@@ -504,14 +502,14 @@ export default function Home() {
                   placeholder="Message"
                   rows={4}
                   className="w-full px-4 py-2 rounded-xl border-2 text-gray-700 placeholder-gray-500 resize-none focus:outline-none focus:border-[#9A0600]"
-                  style={{ borderColor: "#9A0600" }}
+                  style={{ borderColor: "#A30003" }}
                 />
 
                 {/* Submit button */}
                 <a
                   href="mailto:date.calendate@gmail.com"
                   className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
-                  style={{ backgroundColor: "#801F20" }}
+                  style={{ backgroundColor: "#A30003" }}
                 >
                   Contact us
                 </a>
@@ -541,7 +539,7 @@ export default function Home() {
           <div className="flex-1 bg-black/60 flex flex-col items-start justify-center px-6 pt-16 relative z-10">
             <div className="text-left max-w-sm">
               <h1 className="text-4xl font-bold mb-4 text-white">
-                calen.date <span style={{ color: "#9A0600" }}>💌</span>
+                calen.date <span style={{ color: "#A30003" }}>💌</span>
               </h1>
               <p className="text-md mb-8 font-[600] text-white">
                 The dating app that plans your next date
@@ -553,7 +551,7 @@ export default function Home() {
                 style={{
                   borderRadius: "100px",
                   border: "1px solid rgba(255, 255, 255, 0.12)",
-                  background: "#801F20",
+                  background: "#A30003",
                   boxShadow: "0px 0px 24px 0px rgba(255, 255, 255, 0.24)",
                 }}
               >
@@ -583,26 +581,26 @@ export default function Home() {
             <div className="text-left mb-8">
               <h2
                 className="text-xl font-[600] mb-4"
-                style={{ color: "#9A0600" }}
+                style={{ color: "#A30003" }}
               >
                 No swiping, no doxxing
               </h2>
               <div>
                 <h3
                   className="text-2xl font-[700]"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   Tell us about yourself,
                 </h3>
                 <h3
                   className="text-2xl font-[700]"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   3 quick questions, & accept
                 </h3>
                 <h3
                   className="text-2xl font-[700]"
-                  style={{ color: "#9A0600" }}
+                  style={{ color: "#A30003" }}
                 >
                   your calendar invite
                 </h3>
@@ -613,7 +611,7 @@ export default function Home() {
           </div>
           <div
             className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center relative"
-            style={{ backgroundColor: "#801F20" }}
+            style={{ backgroundColor: "#A30003" }}
           >
             <h4 className="text-2xl font-[700] text-white mb-4">
               One match, one date
@@ -647,10 +645,10 @@ export default function Home() {
         {/* Third Page - Tell Us About Yourself */}
         <div id="tell-us-mobile" className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
               Tell us about yourself
             </h2>
-            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
               Quick, casual, easy — tell us about your perfect date
             </p>
           </div>
@@ -669,10 +667,10 @@ export default function Home() {
         {/* Fourth Page - Review Availability */}
         <div className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
               Tell us when you&apos;re free
             </h2>
-            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
               Because finding time is easier than making time
             </p>
           </div>
@@ -691,10 +689,10 @@ export default function Home() {
         {/* Fifth Page - Algorithm */}
         <div className="bg-white">
           <div className="px-6 pb-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
               See the actual algorithm
             </h2>
-            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
               No AI, no &quot;vibes&quot; - read about why they&apos;re the
               right person for you
             </p>
@@ -714,10 +712,10 @@ export default function Home() {
         {/* Sixth Page - Match */}
         <div className="bg-white">
           <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#9A0600" }}>
+            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
               Right person, right time
             </h2>
-            <p className="text-lg font-[600]" style={{ color: "#9A0600" }}>
+            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
               Receive your date & match, curated just for you every week
             </p>
           </div>
@@ -746,13 +744,13 @@ export default function Home() {
           <div className="mb-6">
             <p
               className="text-2xl font-bold mb-2 w-[250px] mx-auto"
-              style={{ color: "#9A0600" }}
+              style={{ color: "#A30003" }}
             >
               Accept your calendar invite, & date!
             </p>
             <p
               className="text-lg font-[600] w-[250px] mx-auto"
-              style={{ color: "#9A0600" }}
+              style={{ color: "#A30003" }}
             >
               Dating should be as easy as accepting an invite
             </p>
@@ -760,14 +758,14 @@ export default function Home() {
           <button
             onClick={() => router.push("/join-waitlist")}
             className="w-[200px] px-8 py-4 rounded-full text-xl font-[600] text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#801F20" }}
+            style={{ backgroundColor: "#A30003" }}
           >
             Sign up
           </button>
         </div>
 
         {/* Mobile About */}
-        <div className="bg-[#9A0600] px-6 py-12 text-center">
+        <div className="bg-[#A30003] px-6 py-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">about us</h2>
           <Image
             src="/images/about-us.png"
@@ -782,13 +780,13 @@ export default function Home() {
         {/* Mobile Contact */}
         <div className="bg-white px-6 py-12">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold" style={{ color: "#801F20" }}>
+            <h1 className="text-4xl font-bold" style={{ color: "#A30003" }}>
               calen.date
             </h1>
             <p
               className="text-lg font-bold leading-tight"
               style={{
-                color: "#801F20",
+                color: "#A30003",
                 letterSpacing: "-1%",
               }}
             >
@@ -799,7 +797,7 @@ export default function Home() {
           <a
             href="mailto:date.calendate@gmail.com"
             className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
-            style={{ backgroundColor: "#801F20" }}
+            style={{ backgroundColor: "#A30003" }}
           >
             Contact us
           </a>
