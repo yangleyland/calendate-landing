@@ -18,7 +18,12 @@ export const RefreshSection: React.FC = () => {
         />
         <img
           src="/images/invite-card.png"
-          className="object-contain max-w-full h-[300px] absolute bottom-10 left-0"
+          className="object-contain z-10 max-w-full h-[300px] absolute bottom-10 left-0"
+          alt="Fresh match illustration"
+        />
+        <img
+          src="/images/dining.png"
+          className="object-contain max-w-full h-[150px] absolute bottom-20 left-0"
           alt="Fresh match illustration"
         />
       </div>
