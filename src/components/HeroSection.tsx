@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
         calen
       </div>
       <div className="h-full relative flex w-full flex-col items-center justify-between h-full">
-        <div className="mt-20 text-[157px] font-extrabold leading-none tracking-[-10.99px] self-end pr-[33px]">
+        <div className="mt-20 text-[157px] font-extrabold leading-none tracking-[-10.99px] self-end pr-[-100px]">
           date
         </div>
         <div className="flex flex-col items-center">
