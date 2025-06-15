@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const HowItWorksSection: React.FC = () => {
   return (
@@ -8,11 +8,9 @@ export const HowItWorksSection: React.FC = () => {
           How does it work?
         </h2>
         <div className="w-full mt-8">
-          <div className="text-[#A30003] text-base font-medium">
-            (1)
-          </div>
+          <div className="text-[#A30003] text-base font-medium">(1)</div>
           <h3 className="text-[#A30003] text-2xl font-bold mt-3">
-            Tell us about yourself & when you're free for a date.
+            Tell us about yourself & when you&apos;re free for a date.
           </h3>
         </div>
       </div>
