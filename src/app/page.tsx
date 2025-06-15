@@ -3,6 +3,16 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { HeroSection } from "@/components/HeroSection";
+import { FeatureSection } from "@/components/FeatureSection";
+import { PromiseSection } from "@/components/PromiseSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { InteractiveCards } from "@/components/InteractiveCards";
+import { MatchingSection } from "@/components/MatchingSection";
+import { DateSection } from "@/components/DateSection";
+import { RefreshSection } from "@/components/RefreshSection";
+import { SignupSection } from "@/components/SignupSection";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -83,32 +93,15 @@ export default function Home() {
 
       {/* Mobile Navigation */}
       <nav
-        className={`md:hidden sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-4 transition-all duration-300 ${
-          scrolled ? "bg-[#A30003]/60 backdrop-blur-md shadow-sm" : ""
-        }`}
-        style={scrolled ? {} : { backgroundColor: "#A30003" }}
+        className={`md:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 transition-all duration-300 
+           bg-[rgba(255,255,255,0.12)] backdrop-blur-md shadow-sm
+        `}
       >
-        <span className="text-xl font-bold text-white">calen.date</span>
         <button
           onClick={() => router.push("/join-waitlist")}
-          style={{
-            background: "rgba(255, 255, 255, 0.41)",
-          }}
-          className="px-3 py-1  rounded-2xl inline-flex justify-start items-center gap-1.5"
+          className="bg-[rgba(255,255,255,0.24)] border w-10 h-10 px-2.5 rounded-[100px] border-[rgba(255,255,255,0.12)] border-solid flex items-center justify-center ml-auto hover:bg-[rgba(255,255,255,0.32)] active:bg-[rgba(255,255,255,0.16)] active:scale-95 transition-all"
         >
-          <div className="font-bold text-white">Date</div>
-          <svg
-            width="10"
-            height="9"
-            viewBox="0 0 10 9"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 3.0595C0 5.60185 2.01 6.9564 3.481 8.16928C4 8.59693 4.5 9 5 9C5.5 9 6 8.59745 6.519 8.16876C7.9905 6.95692 10 5.60185 10 3.06003C10 0.518206 7.25 -1.28595 5 1.15863C2.75 -1.28595 0 0.51716 0 3.0595Z"
-              fill="white"
-            />
-          </svg>
+          💌
         </button>
       </nav>
 
@@ -575,285 +568,17 @@ export default function Home() {
 
       {/* MOBILE VERSION - Hidden on desktop */}
       <div className="block md:hidden">
-        {/* First Page - Hero */}
-        <div id="home-mobile" className="min-h-screen flex flex-col relative">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/landing-1.png"
-              alt="Photobooth strip showing couples"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Hero Content with overlay */}
-          <div className="flex-1 bg-black/60 flex flex-col items-start justify-center px-6 pt-16 relative z-10">
-            <div className="text-left max-w-sm">
-              <h1 className="text-4xl font-bold mb-4 text-white">
-                calen.date <span style={{ color: "#A30003" }}>💌</span>
-              </h1>
-              <p className="text-md mb-8 font-[600] text-white">
-                The dating app that plans your next date
-              </p>
-
-              <button
-                onClick={() => router.push("/join-waitlist")}
-                className="w-2/3 px-6 py-3 text-sm font-[700] hover:opacity-90 transition-opacity border flex items-center justify-between text-white"
-                style={{
-                  borderRadius: "100px",
-                  border: "1px solid rgba(255, 255, 255, 0.12)",
-                  background: "#A30003",
-                  boxShadow: "0px 0px 24px 0px rgba(255, 255, 255, 0.24)",
-                }}
-              >
-                <span>Join the waitlist</span>
-                <svg
-                  width="12"
-                  height="10"
-                  viewBox="0 0 12 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.57534 0.611693C6.73357 0.453514 6.94814 0.364655 7.17188 0.364655C7.39561 0.364655 7.61018 0.453514 7.76841 0.611693L11.5653 4.40857C11.7235 4.56679 11.8123 4.78137 11.8123 5.0051C11.8123 5.22883 11.7235 5.4434 11.5653 5.60163L7.76841 9.39851C7.60927 9.5522 7.39614 9.63725 7.17491 9.63532C6.95368 9.6334 6.74206 9.54467 6.58562 9.38823C6.42918 9.23179 6.34045 9.02017 6.33853 8.79894C6.3366 8.57771 6.42165 8.36458 6.57534 8.20544L8.85938 5.84885H0.84375C0.619974 5.84885 0.405362 5.75995 0.247129 5.60172C0.0888949 5.44349 0 5.22888 0 5.0051C0 4.78132 0.0888949 4.56671 0.247129 4.40848C0.405362 4.25024 0.619974 4.16135 0.84375 4.16135H8.85938L6.57534 1.80476C6.41717 1.64653 6.32831 1.43196 6.32831 1.20822C6.32831 0.984492 6.41717 0.76992 6.57534 0.611693Z"
-                    fill="white"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Page - How It Works */}
-        <div className="bg-white">
-          {/* Content Sections */}
-          <div className="px-6 py-8 h-[353px] flex flex-col justify-center">
-            {/* Top Section */}
-            <div className="text-left mb-8">
-              <h2
-                className="text-xl font-[600] mb-4"
-                style={{ color: "#A30003" }}
-              >
-                No swiping, no doxxing
-              </h2>
-              <div>
-                <h3
-                  className="text-2xl font-[700]"
-                  style={{ color: "#A30003" }}
-                >
-                  Tell us about yourself,
-                </h3>
-                <h3
-                  className="text-2xl font-[700]"
-                  style={{ color: "#A30003" }}
-                >
-                  3 quick questions, & accept
-                </h3>
-                <h3
-                  className="text-2xl font-[700]"
-                  style={{ color: "#A30003" }}
-                >
-                  your calendar invite
-                </h3>
-              </div>
-            </div>
-
-            {/* Bottom Section */}
-          </div>
-          <div
-            className="h-1/2 p-6 text-left h-[353px] flex flex-col justify-center relative"
-            style={{ backgroundColor: "#A30003" }}
-          >
-            <h4 className="text-2xl font-[700] text-white mb-4">
-              One match, one date
-            </h4>
-            <p className="text-lg font-[600] text-white mb-4">
-              Each match is an actual date on your calendar
-            </p>
-
-            <button
-              onClick={() =>
-                document
-                  .getElementById("tell-us-mobile")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="absolute bottom-0 right-4 flex items-center justify-center space-x-2 mx-auto hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src="/images/arrow-2.svg"
-                alt="Arrow pointing"
-                width={24}
-                height={24}
-                className="w-10 h-10"
-              />
-              <span className="text-md font-[700] text-white relative bottom-2">
-                How does it work?
-              </span>
-            </button>
-          </div>
-        </div>
-
-        {/* Third Page - Tell Us About Yourself */}
-        <div id="tell-us-mobile" className="bg-white">
-          <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
-              Tell us about yourself
-            </h2>
-            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
-              Quick, casual, easy — tell us about your perfect date
-            </p>
-          </div>
-          <div className="px-6 pb-8">
-            <Image
-              src="/images/survey.png"
-              alt="App interface showing survey questions"
-              width={400}
-              height={300}
-              className="w-full object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Fourth Page - Review Availability */}
-        <div className="bg-white">
-          <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
-              Tell us when you&apos;re free
-            </h2>
-            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
-              Because finding time is easier than making time
-            </p>
-          </div>
-          <div className="px-6 pb-8 flex justify-center">
-            <Image
-              src="/images/review-availability.png"
-              alt="App interface showing availability"
-              width={250}
-              height={350}
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Fifth Page - Algorithm */}
-        <div className="bg-white">
-          <div className="px-6 pb-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
-              See the actual algorithm
-            </h2>
-            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
-              No AI, no &quot;vibes&quot; - read about why they&apos;re the
-              right person for you
-            </p>
-          </div>
-          <div className="px-6 py-8">
-            <Image
-              src="/images/reveal-collection.png"
-              alt="App interface showing algorithm"
-              width={400}
-              height={250}
-              className="w-full object-contain mb-6"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Sixth Page - Match */}
-        <div className="bg-white">
-          <div className="px-6 py-8 text-center">
-            <h2 className="text-2xl font-[700]" style={{ color: "#A30003" }}>
-              Right person, right time
-            </h2>
-            <p className="text-lg font-[600]" style={{ color: "#A30003" }}>
-              Receive your date & match, curated just for you every week
-            </p>
-          </div>
-          <div className="px-6 pb-8">
-            <Image
-              src="/images/match.png"
-              alt="App interface showing match"
-              width={400}
-              height={350}
-              className="w-full object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Seventh Page - Calendar Invite */}
-        <div className="bg-white px-6 py-12 text-center">
-          <Image
-            src="/images/calendar-appointment.png"
-            alt="Calendar invite"
-            width={350}
-            height={300}
-            className="w-full object-contain mb-6"
-            priority
-          />
-          <div className="mb-6">
-            <p
-              className="text-2xl font-bold mb-2 w-[250px] mx-auto"
-              style={{ color: "#A30003" }}
-            >
-              Accept your calendar invite, date
-            </p>
-            <p
-              className="text-lg font-[600] w-[250px] mx-auto"
-              style={{ color: "#A30003" }}
-            >
-              Dating should be as easy as accepting an invite
-            </p>
-          </div>
-          <button
-            onClick={() => router.push("/join-waitlist")}
-            className="w-[200px] px-8 py-4 rounded-full text-xl font-[600] text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#A30003" }}
-          >
-            Sign up
-          </button>
-        </div>
-
-        {/* Mobile About */}
-        <div className="bg-[#A30003] px-6 py-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">about us</h2>
-          <Image
-            src="/images/about-us.png"
-            alt="About us"
-            width={400}
-            height={300}
-            className="w-full object-contain"
-            priority
-          />
-        </div>
-
-        {/* Mobile Contact */}
-        <div className="bg-white px-6 py-12">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold" style={{ color: "#A30003" }}>
-              calen.date
-            </h1>
-            <p
-              className="text-lg font-bold leading-tight"
-              style={{
-                color: "#A30003",
-                letterSpacing: "-1%",
-              }}
-            >
-              Find your right person, right time
-            </p>
-          </div>
-
-          <a
-            href="mailto:date.calendate@gmail.com"
-            className="w-full px-8 py-4 rounded-full text-xl font-medium text-white hover:opacity-90 transition-opacity block text-center"
-            style={{ backgroundColor: "#A30003" }}
-          >
-            Contact us
-          </a>
+        <div className="bg-white flex max-w-[480px] w-full flex-col overflow-hidden items-stretch mx-auto">
+          <HeroSection />
+          <FeatureSection />
+          <PromiseSection />
+          <HowItWorksSection />
+          <InteractiveCards />
+          <MatchingSection />
+          <DateSection />
+          <RefreshSection />
+          <SignupSection />
+          <Footer />
         </div>
       </div>
       {/* END MOBILE VERSION */}
