@@ -9,7 +9,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col relative h-screen w-full items-stretch text-[#FEFDF8] pb-9">
+    <section className="flex flex-col relative h-dvh w-full items-stretch text-[#FEFDF8] pb-9">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/15ff24cdbd9301079996b50d3891c4c6ad1bbf76?placeholderIfAbsent=true"
         className="absolute h-full w-full object-cover inset-0"
@@ -18,13 +18,8 @@ export const HeroSection: React.FC = () => {
       <div className="relative text-[141px] font-[900] leading-none tracking-[-9.85px]  mt-[145px]">
         calen
       </div>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8bdbd3914da0cb75a73bfd757b0f279052971a3d?placeholderIfAbsent=true"
-        className="aspect-[1.43] object-contain w-full max-w-[304px]"
-        alt="Calendar interface"
-      />
-      <div className="relative flex w-full flex-col items-center justify-between h-full">
-        <div className="text-[157px] font-extrabold leading-none tracking-[-10.99px] self-end pr-[33px]">
+      <div className="h-full relative flex w-full flex-col items-center justify-between h-full">
+        <div className="mt-20 text-[157px] font-extrabold leading-none tracking-[-10.99px] self-end pr-[33px]">
           date
         </div>
         <div className="flex flex-col items-center">
