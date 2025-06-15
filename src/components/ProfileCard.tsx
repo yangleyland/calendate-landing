@@ -60,12 +60,12 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
             </div>
           </div>
         </div>
-        <div className="text-[#A9A9A9] text-[7px] font-medium mt-[17px]">
+        <div className="text-[#A9A9A9] text-[7px] font-medium mt-[17px] pr-2">
           {pronouns}
         </div>
       </div>
       <div className="flex w-full flex-col text-[7px] whitespace-nowrap pl-[9px] pr-[35px]">
-        <div className="flex h-[19px] items-center gap-[22px] justify-between">
+        <div className="flex h-[19px] items-center gap-[22px] justify-start">
           <div className="self-stretch w-[31px] my-auto">
             <div className="text-[rgba(159,159,159,1)] font-normal">
               Sexuality
