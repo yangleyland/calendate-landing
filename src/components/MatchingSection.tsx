@@ -10,7 +10,7 @@ export const MatchingSection: React.FC = () => {
           Real people match & plan your date.
         </h2>
         <p className="text-[#A30003] mt-2">
-          It's true—we view every single profile to ensure compatibility.
+          It&apos;s true—we view every single profile to ensure compatibility.
         </p>
       </div>
       <div className="mt-8">
