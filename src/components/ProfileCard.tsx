@@ -27,7 +27,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
 }) => {
   return (
     <article className="shadow-[0px_4px_12px_12px_rgba(0,0,0,0.04)] w-[45%] overflow-hidden bg-white mx-auto pb-3">
-      <div className="flex flex-col relative aspect-[0.967] w-[175px]">
+      <div className="w-full flex flex-col relative aspect-[0.967] w-[175px]">
         <img
           src={profileImage}
           className="absolute h-full w-full object-cover inset-0"
