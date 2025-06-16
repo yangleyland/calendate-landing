@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col relative w-screen h-[960px] text-[#FEFDF8] p-0 m-0 overflow-hidden">
       <img
-        src="/images/hero.png"
+        src="/images/hero.PNG"
         className="absolute w-screen h-full object-contain inset-0"
         alt="Hero background"
       />
