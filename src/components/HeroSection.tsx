@@ -9,23 +9,18 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col relative h-dvh w-full items-stretch text-[#FEFDF8] pb-9">
+    <section className="flex flex-col relative w-screen h-[960px] text-[#FEFDF8] p-0 m-0 overflow-hidden">
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/15ff24cdbd9301079996b50d3891c4c6ad1bbf76?placeholderIfAbsent=true"
-        className="absolute h-full w-full object-cover inset-0"
+        src="/images/hero.png"
+        className="absolute w-screen h-full object-contain inset-0"
         alt="Hero background"
       />
-      <div className="relative text-[141px] font-[900] leading-none tracking-[-9.85px]  mt-[145px]">
-        calen
-      </div>
-      <div className="h-full relative flex w-full flex-col items-center justify-between h-full">
-        <div className="mt-20 text-[157px] font-extrabold leading-none tracking-[-10.99px] self-end pr-[-100px]">
-          date
-        </div>
-        <div className="flex flex-col items-center">
+
+      <div className="h-full relative flex w-full flex-col items-center justify-end h-full pb-[50px]">
+        <div className="flex flex-col items-center w-3/4">
           <button
             onClick={() => router.push("/join-waitlist")}
-            className="bg-[#A30003] gap-3 text-base text-white font-bold leading-[1.4] px-6 py-5 rounded-[100px] border-solid border-[rgba(255,255,255,0.12)] hover:bg-[#8B0002] active:bg-[#B30003] active:scale-95 transition-all"
+            className="bg-[#A30003] gap-3 text-base text-white font-bold w-full leading-[1.4] px-6 py-5 rounded-[100px] border-solid border-[rgba(255,255,255,0.12)] hover:bg-[#8B0002] active:bg-[#B30003] active:scale-95 transition-all"
           >
             Join the waitlist
           </button>
